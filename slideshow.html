@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="slideshow.css">
+<!-- <script src="slideshow.js"></script> -->
+
+<body>
+
+<div class="w3-container">
+ <center> <h2>Poverty in Africa</h2> </center>
+  <center> <p>Below are stories of the sad realities people face in Africa.</p> </center>
+</div>
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <center><img src="shadreck.png" height="540" width="540"></center>
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-white">
+  <font color="black">This is some text!</font>
+    red
+  </div>
+</div>
+
+<div class="w3-display-co ntainer mySlides">
+  <center><img src="jane.png" height="540" width="540" ></center>
+  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+  Orange
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <center><img src="howard.png" height="550" width="540"></center>
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+    yellow
+  </div>
+</div>
+<div class= "slide-wrap">
+<!-- <a href="#slide-1"><img src="howard.png"></a>
+ <a href="#slide-2"><img src="jane.png"></a>
+ <a href="#slide-3"><img src="shadreck"></a>
+ <div class="slider">
+     <div class="slide" id="slide-1">1</div>
+     <div class="slide" id="slide-2">2</div>
+     <div class="slide" id="slide-3">3</div> -->
+<button id="leftButton" class="left_B" onclick="plusDivs(-1)">&#10094;</button>
+<button id="rightButton" class="right_B" onclick="plusDivs(1)">&#10095;</button>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+</div>
+</body>
+</html>
